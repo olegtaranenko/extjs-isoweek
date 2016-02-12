@@ -1,0 +1,12 @@
+diff --git a/frontend/trianel_pilot/ext/classic/classic/src/picker/Date.js b/frontend/trianel_pilot/ext/classic/classic/src/picker/Date.js
+index ada6c63..5dac0f0 100644
+--- a/frontend/trianel_pilot/ext/classic/classic/src/picker/Date.js
++++ b/frontend/trianel_pilot/ext/classic/classic/src/picker/Date.js
+@@ -999,6 +999,7 @@ Ext.define('Ext.picker.Date', {
+                 // match up the component hierarchy so that focus does not leave
+                 // an owning picker field if/when this gets focus.
+                 ownerCmp: me,
++                showButtons: me.showButtons,
+                 floating: true,
+                 padding: me.padding,
+                 shadow: false,

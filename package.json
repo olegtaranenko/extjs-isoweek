@@ -16,7 +16,7 @@
       * As a general rule, all classes that belong to this package should be under this namespace
       * if multiple namespaces are part of this package, set this to "".
       */
-     "namespace": "Insistent",
+     "namespace": "",
 
     /**
      * The package type.

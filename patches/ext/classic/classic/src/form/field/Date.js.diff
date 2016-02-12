@@ -1,0 +1,29 @@
+diff --git a/frontend/trianel_pilot/ext/classic/classic/src/form/field/Date.js b/frontend/trianel_pilot/ext/classic/classic/src/form/field/Date.js
+index cd9d1a6..0b63d4b 100644
+--- a/frontend/trianel_pilot/ext/classic/classic/src/form/field/Date.js
++++ b/frontend/trianel_pilot/ext/classic/classic/src/form/field/Date.js
+@@ -271,6 +271,8 @@ Ext.define('Ext.form.field.Date', {
+     
+     ariaRole: 'combobox',
+ 
++    datePickerWidget: 'datepicker',
++
+     initComponent: function() {
+         var me = this,
+             isString = Ext.isString,
+@@ -559,12 +561,13 @@ Ext.define('Ext.form.field.Date', {
+ 
+     createPicker: function() {
+         var me = this,
+-            format = Ext.String.format;
++            format = Ext.String.format,
++            datePickerWidget = me.datePickerWidget;
+ 
+         // Create floating Picker BoundList. It will acquire a floatParent by looking up
+         // its ancestor hierarchy (Pickers use their pickerField property as an upward link)
+         // for a floating component.
+-        return new Ext.picker.Date({
++        return Ext.widget(datePickerWidget, {
+             pickerField: me,
+             floating: true,
+             preventRefocus: true,

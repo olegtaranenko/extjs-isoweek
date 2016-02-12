@@ -1,0 +1,48 @@
+diff --git a/frontend/trianel_pilot/ext/classic/classic/src/picker/Month.js b/frontend/trianel_pilot/ext/classic/classic/src/picker/Month.js
+index 5a43d6f..e4c1989 100644
+--- a/frontend/trianel_pilot/ext/classic/classic/src/picker/Month.js
++++ b/frontend/trianel_pilot/ext/classic/classic/src/picker/Month.js
+@@ -1,6 +1,6 @@
+ /**
+- * A month / year picker component. This class is used by the 
+- * {@link Ext.picker.Date Date picker} to allow browsing and selection of year and 
++ * A month / year picker component. This class is used by the
++ * {@link Ext.picker.Date Date picker} to allow browsing and selection of year and
+  * months combinations, but may also be used as a standalone component.
+  *
+  *     @example
+@@ -50,6 +50,11 @@ Ext.define('Ext.picker.Month', {
+               '</tpl>',
+           '</div>',
+           '<div id="{id}-yearEl" data-ref="yearEl" class="{baseCls}-years">',
++              '<tpl for="years">',
++                  '<div class="{parent.baseCls}-item {parent.baseCls}-year">',
++                      '<a hidefocus="on" class="{parent.baseCls}-item-inner" role="button">{.}</a>',
++                  '</div>',
++              '</tpl>',
+               '<div class="{baseCls}-yearnav">',
+                   '<div class="{baseCls}-yearnav-button-ct">',
+                       '<a id="{id}-prevEl" data-ref="prevEl" class="{baseCls}-yearnav-button {baseCls}-yearnav-prev" hidefocus="on" role="button"></a>',
+@@ -58,11 +63,6 @@ Ext.define('Ext.picker.Month', {
+                       '<a id="{id}-nextEl" data-ref="nextEl" class="{baseCls}-yearnav-button {baseCls}-yearnav-next" hidefocus="on" role="button"></a>',
+                   '</div>',
+               '</div>',
+-              '<tpl for="years">',
+-                  '<div class="{parent.baseCls}-item {parent.baseCls}-year">',
+-                      '<a hidefocus="on" class="{parent.baseCls}-item-inner" role="button">{.}</a>',
+-                  '</div>',
+-              '</tpl>',
+           '</div>',
+           '<div class="' + Ext.baseCSSPrefix + 'clear"></div>',
+           '<tpl if="showButtons">',
+@@ -125,8 +125,8 @@ Ext.define('Ext.picker.Month', {
+     /**
+      * @private
+      */
+-    totalYears: 10,
+-    yearOffset: 5, // 10 years in total, 2 per row
++    totalYears: 12,
++    yearOffset: 6, // 10 years in total, 2 per row
+     monthOffset: 6, // 12 months, 2 per row
+ 
+     /**

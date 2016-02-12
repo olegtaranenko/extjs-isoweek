@@ -1,0 +1,11 @@
+diff --git a/frontend/trianel_pilot/ext/classic/theme-neutral/sass/src/picker/Date.scss b/frontend/trianel_pilot/ext/classic/theme-neutral/sass/src/picker/Date.scss
+index 490117b..c68d5d5 100644
+--- a/frontend/trianel_pilot/ext/classic/theme-neutral/sass/src/picker/Date.scss
++++ b/frontend/trianel_pilot/ext/classic/theme-neutral/sass/src/picker/Date.scss
+@@ -1,5 +1,5 @@
+ // private vars
+-$datepicker-width: ($datepicker-item-width * 7) + horizontal($datepicker-border-width);
++$datepicker-width: ($datepicker-item-width * 8) + horizontal($datepicker-border-width) + horizontal($ies-datepicker-week-no-margin);
+ $datepicker-button-height: $button-small-icon-size + vertical($datepicker-month-button-padding);
+ $datepicker-monthpicker-months-width: floor(($datepicker-width - horizontal($datepicker-border-width)) / 2);
+ $datepicker-monthpicker-years-width: ceil(($datepicker-width - horizontal($datepicker-border-width)) / 2);
