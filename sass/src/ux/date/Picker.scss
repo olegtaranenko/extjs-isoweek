@@ -1,0 +1,12 @@
+.x-picker-week-no {
+  div {
+    cursor: default;
+    margin-left: $insistent-datepicker-week-no-margin;
+    padding-right: 0;
+    color: $insistent-text-color;
+  }
+}
+
+.x-datepicker > div {
+  margin: 5px;
+}
